@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   about1 = '' +
-    'I am Full Stack Developer specializing in 3 tier web applications. ';
+    'I am an AWS Certified Solutions Architect and Developer Associate specializing in three-tier web applications. ';
 
   about2 =
     'I have experience with all stages of the development cycle for dynamic web projects, ' +
