@@ -5,6 +5,7 @@ import {ProfileComponent} from './profile/profile.component';
 
 const routes: Routes = [
   {path: '', component: ProfileComponent, pathMatch: 'full'},
+  {path: '**', redirectTo: ''},
 ];
 
 const routerOptions: ExtraOptions = {

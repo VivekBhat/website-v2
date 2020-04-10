@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-intro',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onClick(id: string) {
+    id = '#' + id;
+    const element = document.querySelector(id);
+    if (element) {
+      this.location.replaceState(id);
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
   }
-
 }
