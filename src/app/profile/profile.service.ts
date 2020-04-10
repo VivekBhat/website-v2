@@ -97,9 +97,9 @@ export class ProfileService {
     }
   ];
 
-  contactus(data: any): Observable<any> {
-    return this.http.post(this.baseUrl + 'contact', data);
-  }
+  // contactus(data: any): Observable<any> {
+  // return this.http.post(this.baseUrl + 'contact', data);
+  // }
 
   skills(): Observable<any> {
     // return this.http.get(this.baseUrl + 'skills');
