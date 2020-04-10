@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(id: string) {
+    const element = document.querySelector('#' + id);
+    console.log(element);
+    if (element) {
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
 }
