@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -6,17 +7,23 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  ids: Array<string> = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'reference', 'contact'];
 
-  constructor() { }
+  constructor(private location: Location) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClick(id: string) {
-    const element = document.querySelector('#' + id);
-    console.log(element);
-    if (element) {
-      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if (id === 'resume') {
+      window.open('../../../assets/resume/Resume_Vivek_Bhat.pdf', '_blank');
+    } else {
+      id = '#' + id;
+      const element = document.querySelector(id);
+      if (element) {
+        this.location.replaceState(id);
+        element.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+
     }
   }
 }
