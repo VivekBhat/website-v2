@@ -5,6 +5,7 @@ message=${1}
 echo "Building app..."
 ng build
 
+echo "vivekbhat.me" > docs/CNAME
 echo
 echo "Pushing it to git.."
 
