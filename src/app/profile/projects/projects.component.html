@@ -4,59 +4,18 @@
 
     <div class="row">
 
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="../../../assets/images/expertiza_1.jpg" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Expertiza Docker Image</h4>
-              <h5 class="card-text"><b>Technology :</b> Docker, Bash scripts, GitHub</h5>
-              <!--<h5 class="card-text"><a href="http://my-personal-portfolio.epizy.com/?i=2">View my Live Demo</a></h5>-->
-
-              <!--<a (click)="onClickSee()" style="color: white" class="btn btn-primary stretched-link ml-2 mr-5">See-->
-              <!--Project</a>-->
-              <div style="text-align: center">
-                <a class="btn btn-primary stretched-link" href="https://github.com/VivekBhat/expertiza" target="_blank">GithubLink</a>
-              </div>
-
-            </div>
-          </div>
+      <ng-container *ngFor="let project of ossProjects">
+        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+          <app-oss-projects [title]="project.title"
+                            [technology]="project.technology"
+                            [img]="project.imgName">
+          </app-oss-projects>
         </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="../../../assets/images/expertiza_2.jpg" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Expertiza Log Visualization</h4>
-              <h5 class="card-text"><b>Technology :</b> Django,Python,Bootstrap3 </h5>
-              <div style="text-align: center">
-                <a class="btn btn-primary stretched-link" href="https://github.com/VivekBhat/expertiza" target="_blank">GithubLink</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="../../../assets/images/expertiza_3.jpg" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Expertiza Wiki Page</h4>
-              <h5 class="card-text"><b>Technology :</b> HTML5,CSS3,JS,MYSQL,PHP </h5>
-              <div style="text-align: center">
-                <a class="btn btn-primary stretched-link" href="https://github.com/VivekBhat/expertiza" target="_blank">GithubLink</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </ng-container>
     </div>
+
     <div class="h4 text-center mb-4 title">Other Projects</div>
+
     <div class="row">
       <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
         <div class="blog-entry">
