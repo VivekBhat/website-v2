@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\n<div class=\"page-content\">\n  <app-intro></app-intro>\n  <app-about></app-about>\n  <app-education></app-education>\n  <app-skills></app-skills>\n  <app-experience></app-experience>\n  <app-projects ></app-projects>\n  <app-portfolio></app-portfolio>\n  <app-reference></app-reference>\n  <app-contact></app-contact>\n</div>\n<app-footer></app-footer>\n<ngx-spinner bdColor=\"rgba(255,255,255,1)\" size=\"medium\" color=\"#033d5b\" type=\"ball-spin-clockwise\"></ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\n<div class=\"page-content\">\n  <app-intro></app-intro>\n  <app-about></app-about>\n  <app-education></app-education>\n  <app-skills></app-skills>\n  <app-experience></app-experience>\n  <app-projects ></app-projects>\n  <!--<app-portfolio></app-portfolio>-->\n  <!--<app-reference></app-reference>-->\n  <app-contact></app-contact>\n</div>\n<app-footer></app-footer>\n<ngx-spinner bdColor=\"rgba(255,255,255,1)\" size=\"medium\" color=\"#033d5b\" type=\"ball-spin-clockwise\"></ngx-spinner>\n");
 
 /***/ }),
 
