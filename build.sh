@@ -6,5 +6,5 @@ echo "Building app..."
 ng build
 
 git add .
-git commit -m message
+git commit -m ${message}
 git push
