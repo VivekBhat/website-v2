@@ -3,125 +3,26 @@
     <div class="h4 text-center mb-4 title">Open Source Projects</div>
 
     <div class="row">
-
-      <ng-container *ngFor="let project of ossProjects">
-        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-          <app-oss-projects [title]="project.title"
-                            [technology]="project.technology"
-                            [githubLink]="project.gitHubLink"
-                            [img]="project.imgName">
-          </app-oss-projects>
-        </div>
-      </ng-container>
+      <ng-container *ngTemplateOutlet="loadProjects; context: {list: ossProjects$ | async}"></ng-container>
     </div>
 
     <div class="h4 text-center mb-4 title">Other Projects</div>
 
     <div class="row">
-      <ng-container *ngFor="let project of otherProjects">
-        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-          <app-oss-projects [title]="project.data.title"
-                            [technology]="project.data.technology"
-                            [img]="project.data.imgName"
-                            [githubLink]="project.data.gitHubLink"
-                            [more]="project.modalData">
-          </app-oss-projects>
-        </div>
-      </ng-container>
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="../../../assets/images/other_1.jpg" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Kubernetes Deployments</h4>
-              <h5 class="card-text"><b>Technology: </b> Kubernetes, Docker, Vagrant</h5>
-
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary ml-2 mr-5" data-toggle="modal" data-target="#projectModal">
-                More
-              </button>
-
-              <a class="btn btn-primary stretched-link"
-                 href="https://github.com/VivekBhat/kubernetes-deployment">GithubLink</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="assets/images/p5.png" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Smart Baby Stroller(Final Year)</h4>
-              <h5 class="card-text"><b>Technology :</b> Python,Android,Firebase </h5>
-              <h5 class="card-text"><a
-                href="https://medium.com/@mehulkothari05/smart-baby-stroller-system-3f6b4f49476a"> Read Blog on this
-                Project</a></h5>
-              <a class="btn btn-primary stretched-link ml-2 mr-5"
-                 href="https://medium.com/@mehulkothari05/smart-baby-stroller-system-3f6b4f49476a">See Project</a>
-              <a class="btn btn-primary stretched-link"
-                 href="https://github.com/mehulk05/Smart-Baby-Stroller-System.git">GithubLink</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="assets/images/p6.png" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Simple Chat Application Using Firebase</h4>
-              <h5 class="card-text"><b>Technology :</b> Android,Java,Firebase </h5>
-              <h5 class="card-text"><a
-                href="https://code.tutsplus.com/tutorials/how-to-create-an-android-chat-app-using-firebase--cms-27397">
-                Read Blog on this Project</a></h5>
-              <a class="btn btn-primary stretched-link ml-2 mr-5" href="https://github.com/mehulk05?tab=repositories">See
-                Project</a>
-              <a class="btn btn-primary stretched-link"
-                 href="https://github.com/mehulk05?tab=repositories">GithubLink</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="assets/images/p8.png" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Know Your Disease</h4>
-              <h5 class="card-text"><b>Technology :</b> HTML5,CSS3,JS,MYSQL,PHP </h5>
-              <a class="btn btn-primary stretched-link ml-2 mr-5" href="https://github.com/mehulk05/Know-Your-Disease">See
-                Project</a>
-              <a class="btn btn-primary stretched-link"
-                 href="https://github.com/mehulk05/Know-Your-Disease">GithubLink</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-        <div class="blog-entry">
-          <div class="card">
-            <img alt="Card image" class="card-img-top" src="assets/images/p9.png" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Pizza Ordering System</h4>
-              <h5 class="card-text"><b>Technology :</b> Java,Servlet,JSP,JDBC </h5>
-              <a class="btn btn-primary stretched-link ml-2 mr-5"
-                 href="https://github.com/mehulk05/Pizza-Ordering-System">See Project</a>
-              <a class="btn btn-primary stretched-link" href="https://github.com/mehulk05/Pizza-Ordering-System">GithubLink</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+      <ng-container *ngTemplateOutlet="loadProjects; context: {list: otherProjects$ | async}"></ng-container>
     </div>
   </div>
 </div>
 
+<ng-template #loadProjects let-list="list">
+  <ng-container *ngFor="let project of list">
+    <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+      <app-oss-projects [title]="project.title"
+                        [technology]="project.technology"
+                        [img]="project.imgName"
+                        [githubLink]="project.gitHubLink"
+                        [more]="project.moreData">
+      </app-oss-projects>
+    </div>
+  </ng-container>
+</ng-template>
