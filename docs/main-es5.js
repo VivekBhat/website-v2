@@ -1536,7 +1536,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, HeaderComponent);
 
         this.location = location;
-        this.ids = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'reference', 'contact'];
+        this.ids = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'contact'];
       }
 
       _createClass(HeaderComponent, [{
@@ -2538,11 +2538,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getOtherProjects",
         value: function getOtherProjects() {
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])([{
-            title: 'Kubernetes Deployments',
+            title: 'Kubernetes Local Deployments',
             imgName: 'other_1',
             technology: 'Kubernetes, Docker, Vagrant',
             gitHubLink: 'kubernetes-deployment',
             moreData: ' In this project I created an ansible script to configure a ' + 'server running Jenkins and build a project. \n' + 'In this project the following tasks were done:\n' + ' 1. Using ansible, be able to automatically configure a server running jenkins.\n' + ' 2. Setup necessary runtime packages automatically.\n' + ' 3. Be able to setup jenkins configuration files automatically.\n' + ' 4. Be able to automatically setup a job to build this repo'
+          }, {
+            title: 'Serverless Thumbnail Generator',
+            imgName: 'other_1',
+            technology: 'Serverless, AWS, Vagrant',
+            gitHubLink: 'serverless-thumbnail-aws',
+            moreData: ' In this project I am using the serverless deployment template to deploy a serverless app. \n' + 'Once an image is uploaded to the S3 bucket a Thumbnail of the same image will be created and uploaded in ' + 'the same bucket with a _thumbnail suffix\n'
           }]);
         }
       }]);

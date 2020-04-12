@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Project} from '../../models/project/projects';
+import {Project} from '../../models/project/project';
 import {ProjectsService, ProjectsServiceToken} from '../../services/projects/projects.service';
 import {Observable} from 'rxjs';
 

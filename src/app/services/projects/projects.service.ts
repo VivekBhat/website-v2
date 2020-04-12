@@ -1,5 +1,5 @@
 import {Observable, of} from 'rxjs';
-import {Project} from '../../models/project/projects';
+import {Project} from '../../models/project/project';
 import {InjectionToken} from '@angular/core';
 
 export const ProjectsServiceToken = new InjectionToken<ProjectsService>('ProjectsService');
@@ -32,7 +32,7 @@ export class ProjectsService {
   getOtherProjects(): Observable<Project[]> {
     return of([
         {
-          title: 'Kubernetes Deployments',
+          title: 'Kubernetes Local Deployments',
           imgName: 'other_1',
           technology: 'Kubernetes, Docker, Vagrant',
           gitHubLink: 'kubernetes-deployment',
@@ -43,6 +43,14 @@ export class ProjectsService {
             ' 2. Setup necessary runtime packages automatically.\n' +
             ' 3. Be able to setup jenkins configuration files automatically.\n' +
             ' 4. Be able to automatically setup a job to build this repo'
+        }, {
+          title: 'Serverless Thumbnail Generator',
+          imgName: 'other_1',
+          technology: 'Serverless, AWS, Vagrant',
+          gitHubLink: 'serverless-thumbnail-aws',
+          moreData: ' In this project I am using the serverless deployment template to deploy a serverless app. \n' +
+            'Once an image is uploaded to the S3 bucket a Thumbnail of the same image will be created and uploaded in ' +
+            'the same bucket with a _thumbnail suffix\n'
         }
       ]
     );
