@@ -8,6 +8,7 @@
         <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
           <app-oss-projects [title]="project.title"
                             [technology]="project.technology"
+                            [githubLink]="project.gitHubLink"
                             [img]="project.imgName">
           </app-oss-projects>
         </div>
@@ -17,19 +18,32 @@
     <div class="h4 text-center mb-4 title">Other Projects</div>
 
     <div class="row">
+      <ng-container *ngFor="let project of otherProjects">
+        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+          <app-oss-projects [title]="project.data.title"
+                            [technology]="project.data.technology"
+                            [img]="project.data.imgName"
+                            [githubLink]="project.data.gitHubLink"
+                            [more]="project.modalData">
+          </app-oss-projects>
+        </div>
+      </ng-container>
+
       <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
         <div class="blog-entry">
           <div class="card">
-            <img alt="Card image" class="card-img-top" src="assets/images/p3.png" style="width:100%">
+            <img alt="Card image" class="card-img-top" src="../../../assets/images/other_1.jpg" style="width:100%">
             <div class="card-body">
-              <h4 class="card-title">Movie Success Prediction(Hackathon)</h4>
-              <h5 class="card-text"><b>Technology :</b> Django,Python,ML,DataScience </h5>
-              <h5 class="card-text"><a href="https://medium.com/@mehulkothari05/movie-success-prediction-a67d871a7b1">
-                Read Blog on this Project</a></h5>
-              <a class="btn btn-primary stretched-link ml-2 mr-5"
-                 href="https://medium.com/@mehulkothari05/movie-success-prediction-a67d871a7b1">See Project</a>
+              <h4 class="card-title">Kubernetes Deployments</h4>
+              <h5 class="card-text"><b>Technology: </b> Kubernetes, Docker, Vagrant</h5>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary ml-2 mr-5" data-toggle="modal" data-target="#projectModal">
+                More
+              </button>
+
               <a class="btn btn-primary stretched-link"
-                 href="https://github.com/mehulk05?tab=repositories">GithubLink</a>
+                 href="https://github.com/VivekBhat/kubernetes-deployment">GithubLink</a>
             </div>
           </div>
         </div>
@@ -110,3 +124,4 @@
     </div>
   </div>
 </div>
+

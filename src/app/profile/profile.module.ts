@@ -14,12 +14,12 @@ import {EducationComponent} from './education/education.component';
 import {ReferenceComponent} from './reference/reference.component';
 import {ContactComponent} from './contact/contact.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
-import {ProjectsComponent} from './projects/projects.component';
-import { OssProjectsComponent } from './projects/oss-projects/oss-projects.component';
+import {ProjectsModule} from './projects/projects.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    ProjectsModule,
     FormsModule,
     SnotifyModule,
     NgxSpinnerModule
@@ -36,8 +36,6 @@ import { OssProjectsComponent } from './projects/oss-projects/oss-projects.compo
     EducationComponent,
     ReferenceComponent,
     ContactComponent,
-    ProjectsComponent,
-    OssProjectsComponent
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},
