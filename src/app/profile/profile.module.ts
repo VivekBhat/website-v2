@@ -10,7 +10,6 @@ import {SkillsComponent} from './skills/skills.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
 import {ExperienceComponent} from './experience/experience.component';
 import {EducationComponent} from './education/education.component';
-import {ReferenceComponent} from './reference/reference.component';
 import {ContactComponent} from './contact/contact.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {ProjectsModule} from './projects/projects.module';
@@ -34,8 +33,7 @@ import {AboutModule} from './about/about.module';
     PortfolioComponent,
     ExperienceComponent,
     EducationComponent,
-    ReferenceComponent,
-    ContactComponent,
+    ContactComponent
   ],
   providers: [
     {provide: 'SnotifyToastConfig', useValue: ToastDefaults},

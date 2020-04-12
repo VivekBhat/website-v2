@@ -1,12 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
-
 })
 export class HeaderComponent implements OnInit {
   ids: Array<string> = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'contact'];
@@ -25,7 +23,6 @@ export class HeaderComponent implements OnInit {
         this.location.replaceState(id);
         element.scrollIntoView({behavior: 'smooth', block: 'start'});
       }
-
     }
   }
 }

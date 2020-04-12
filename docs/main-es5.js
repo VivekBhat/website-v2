@@ -131,7 +131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<footer class=\"footer\">\n    <div class=\"container text-center\">\n      <!--<a class=\"cc-facebook btn btn-link\" href=\"https://www.facebook.com/mehul.kothari.39\" target=\"_blank\">-->\n        <!--<i class=\"fa fa-facebook fa-2x \" aria-hidden=\"true\"></i>-->\n      <!--</a>-->\n      <a class=\"cc-linkedin btn btn-link\" href=\"https://www.linkedin.com/in/vivek-bhat/\" target=\"_blank\">\n        <i class=\"fa fa-linkedin fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"cc-instagram btn btn-link\" href=\"https://www.instagram.com/vivek_bhat_/\" target=\"_blank\">\n        <i class=\"fa fa-instagram fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"cc-twitter btn btn-link \" href=\"https://twitter.com/bhat175\" target=\"_blank\">\n        <i class=\"fa fa-twitter fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n\n      <a class=\"cc-github btn btn-link \" href=\"https://github.com/vivekbhat\" target=\"_blank\">\n        <i class=\"fa fa-github fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n      <!-- <a class=\"cc-google-plus btn btn-link\" href=\"#\" target=\"_blank\">\n        <i class=\"fa fa-google-plus fa-2x\" aria-hidden=\"true\"></i>\n      </a> -->\n    </div>\n    <div class=\"text-center text-muted\">\n      <p>&copy; All rights reserved.\n      </p>\n    </div>\n  </footer>\n";
+    __webpack_exports__["default"] = "<footer class=\"footer\">\n    <div class=\"container text-center\">\n      <a class=\"cc-linkedin btn btn-link\" href=\"https://www.linkedin.com/in/vivek-bhat/\" target=\"_blank\">\n        <i class=\"fa fa-linkedin fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"cc-instagram btn btn-link\" href=\"https://www.instagram.com/vivek_bhat_/\" target=\"_blank\">\n        <i class=\"fa fa-instagram fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n      <a class=\"cc-twitter btn btn-link \" href=\"https://twitter.com/bhat175\" target=\"_blank\">\n        <i class=\"fa fa-twitter fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n\n      <a class=\"cc-github btn btn-link \" href=\"https://github.com/vivekbhat\" target=\"_blank\">\n        <i class=\"fa fa-github fa-2x \" aria-hidden=\"true\"></i>\n      </a>\n    </div>\n    <div class=\"text-center text-muted\">\n      <p>&copy; All rights reserved.\n      </p>\n    </div>\n  </footer>\n";
     /***/
   },
 
@@ -252,26 +252,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<div class=\"section\" id=\"projects\">\n  <div class=\"container cc-education\">\n    <div class=\"h4 text-center mb-4 title\">Open Source Projects</div>\n\n    <div class=\"row\">\n      <ng-container *ngTemplateOutlet=\"loadProjects; context: {list: ossProjects$ | async}\"></ng-container>\n    </div>\n\n    <div class=\"h4 text-center mb-4 title\">Other Projects</div>\n\n    <div class=\"row\">\n      <ng-container *ngTemplateOutlet=\"loadProjects; context: {list: otherProjects$ | async}\"></ng-container>\n    </div>\n  </div>\n</div>\n\n<ng-template #loadProjects let-list=\"list\">\n  <ng-container *ngFor=\"let project of list\">\n    <div class=\"col-md-4 col-sm-6 animate-box\" data-animate-effect=\"fadeInLeft\">\n      <app-oss-projects [title]=\"project.title\"\n                        [technology]=\"project.technology\"\n                        [img]=\"project.imgName\"\n                        [githubLink]=\"project.gitHubLink\"\n                        [more]=\"project.moreData\">\n      </app-oss-projects>\n    </div>\n  </ng-container>\n</ng-template>\n";
-    /***/
-  },
-
-  /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/reference/reference.component.html":
-  /*!**************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/profile/reference/reference.component.html ***!
-    \**************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppProfileReferenceReferenceComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div class=\"section\" id=\"reference\">\n        <div class=\"container cc-reference\">\n          <div class=\"h4 mb-4 text-center title\">References</div>\n          <div class=\"card\" data-aos=\"zoom-in\">\n            <div class=\"carousel slide\" id=\"cc-Indicators\" data-ride=\"carousel\">\n              <ol class=\"carousel-indicators\">\n                <li class=\"active\" data-target=\"#cc-Indicators\" data-slide-to=\"0\"></li>\n                <li data-target=\"#cc-Indicators\" data-slide-to=\"1\"></li>\n               \n              </ol>\n              <div class=\"carousel-inner\">\n                <div class=\"carousel-item active\">\n                  <div class=\"row\">\n                    <div class=\"col-lg-2 col-md-3 cc-reference-header\">\n                      <img src=\"assets/images/sg.jpg\" alt=\"Image\" />\n                      <div class=\"h5 pt-2\">Sagar Patel</div>\n                      <p class=\"category\">HOD </p>\n                      <p class=\"category\">at ASOIT </p>\n                    </div>\n                    <div class=\"col-lg-10 col-md-9\">\n                    <p>\n                      Mehul is creative, innovative, responsible and quite a rational thinker. \n                    Coding as a way of life, his work presents products with great quality, following standards\n                     and good practices.He completed one of my live project on matrimonial website and \n                     I am so impressed with his techniques.\n                    </p>\n                    <p>He has always been hardworking ,creaive,and absolute genius in his creative criticial thinking \n                      He is always ready to take challege as his new opprotunities.\n                    </p>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"carousel-item\">\n                  <div class=\"row\">\n                    <div class=\"col-lg-2 col-md-3 cc-reference-header\">\n                      <img src=\"assets/images/hn.jpg\" alt=\"Image\" />\n                      <h4>Hetal </h4>\n                      <p class=\"category\">Associate S/W Developer,</p>\n                      <p class=\"category\">at Sygnet</p>\n                    </div>\n                    <div class=\"col-lg-10 col-md-9\">\n                      <p> Mehul is a really good working partner with high knowledge on backend and frontend development , \n                        he is always concerned with going forward never afraid of improving or making use of new technologies, \n                        helping his peers whenever\n                         he is able to and solving problems in a quick and efficient manner with his typical optimism</p>\n\n                         <p>We have worked two years togather in same project ,so i know him from my personal experience\n                           Every person want this guy to be in his team.And as a persona I m sure company wont regret for hiring him\n                         </p>\n                    </div>\n                  </div>\n                </div>\n               \n              </div>\n            </div>\n          </div>\n        </div>\n      </div>";
     /***/
   },
 
@@ -931,11 +911,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _profile_profile_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./profile/profile.component */
     "./src/app/profile/profile.component.ts");
+    /* harmony import */
+
+
+    var _router_guard_router_guard_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./router-guard/router-guard.component */
+    "./src/app/router-guard/router-guard.component.ts");
 
     var routes = [{
       path: '',
       component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_3__["ProfileComponent"],
       pathMatch: 'full'
+    }, {
+      path: 'resume',
+      canActivate: [_router_guard_router_guard_component__WEBPACK_IMPORTED_MODULE_4__["RedirectGuard"]],
+      component: _router_guard_router_guard_component__WEBPACK_IMPORTED_MODULE_4__["RedirectGuard"],
+      data: {
+        externalUrl: 'assets/resume/Resume_Vivek_Bhat.pdf'
+      }
     }, {
       path: '**',
       redirectTo: ''
@@ -1067,6 +1060,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
+    /* harmony import */
+
+
+    var _router_guard_router_guard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./router-guard/router-guard.component */
+    "./src/app/router-guard/router-guard.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -1075,7 +1074,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
       imports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _profile_profile_module__WEBPACK_IMPORTED_MODULE_4__["ProfileModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"]],
-      providers: [],
+      providers: [_router_guard_router_guard_component__WEBPACK_IMPORTED_MODULE_8__["RedirectGuard"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
     })], AppModule);
     /***/
@@ -1669,10 +1668,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./header.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/header/header.component.html"))["default"],
-      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], {
-        provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
-        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
-      }],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./header.component.scss */
       "./src/app/profile/header/header.component.scss"))["default"]]
@@ -1778,10 +1773,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./intro.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/intro/intro.component.html"))["default"],
-      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], {
-        provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
-        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
-      }],
+      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./intro.component.scss */
       "./src/app/profile/intro/intro.component.scss"))["default"]]
@@ -2049,31 +2041,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _reference_reference_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-    /*! ./reference/reference.component */
-    "./src/app/profile/reference/reference.component.ts");
-    /* harmony import */
-
-
-    var _contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./contact/contact.component */
     "./src/app/profile/contact/contact.component.ts");
     /* harmony import */
 
 
-    var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var ngx_spinner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ngx-spinner */
     "./node_modules/ngx-spinner/fesm2015/ngx-spinner.js");
     /* harmony import */
 
 
-    var _projects_projects_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _projects_projects_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./projects/projects.module */
     "./src/app/profile/projects/projects.module.ts");
     /* harmony import */
 
 
-    var _about_about_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _about_about_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! ./about/about.module */
     "./src/app/profile/about/about.module.ts");
 
@@ -2082,8 +2068,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     ProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _projects_projects_module__WEBPACK_IMPORTED_MODULE_16__["ProjectsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyModule"], _about_about_module__WEBPACK_IMPORTED_MODULE_17__["AboutModule"], ngx_spinner__WEBPACK_IMPORTED_MODULE_15__["NgxSpinnerModule"]],
-      declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"], _intro_intro_component__WEBPACK_IMPORTED_MODULE_8__["IntroComponent"], _skills_skills_component__WEBPACK_IMPORTED_MODULE_9__["SkillsComponent"], _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"], _experience_experience_component__WEBPACK_IMPORTED_MODULE_11__["ExperienceComponent"], _education_education_component__WEBPACK_IMPORTED_MODULE_12__["EducationComponent"], _reference_reference_component__WEBPACK_IMPORTED_MODULE_13__["ReferenceComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _projects_projects_module__WEBPACK_IMPORTED_MODULE_15__["ProjectsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyModule"], _about_about_module__WEBPACK_IMPORTED_MODULE_16__["AboutModule"], ngx_spinner__WEBPACK_IMPORTED_MODULE_14__["NgxSpinnerModule"]],
+      declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"], _intro_intro_component__WEBPACK_IMPORTED_MODULE_8__["IntroComponent"], _skills_skills_component__WEBPACK_IMPORTED_MODULE_9__["SkillsComponent"], _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"], _experience_experience_component__WEBPACK_IMPORTED_MODULE_11__["ExperienceComponent"], _education_education_component__WEBPACK_IMPORTED_MODULE_12__["EducationComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"]],
       providers: [{
         provide: 'SnotifyToastConfig',
         useValue: ng_snotify__WEBPACK_IMPORTED_MODULE_4__["ToastDefaults"]
@@ -2400,83 +2386,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/profile/reference/reference.component.scss":
-  /*!************************************************************!*\
-    !*** ./src/app/profile/reference/reference.component.scss ***!
-    \************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppProfileReferenceReferenceComponentScss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".cc-reference p {\n  font-weight: 1000px;\n  color: black;\n  font-style: bold;\n}\n\n.category p {\n  width: 10%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9iaGF0dml2ZS9Eb2N1bWVudHMvd2Vic2l0ZS9QZXJzb25hbC1Qb3J0Zm9saW8tQW5ndWxhci1VcGRhdGVkL3NyYy9hcHAvcHJvZmlsZS9yZWZlcmVuY2UvcmVmZXJlbmNlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcm9maWxlL3JlZmVyZW5jZS9yZWZlcmVuY2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxtQkFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVFO0VBQ0ksVUFBQTtBQ0NOIiwiZmlsZSI6InNyYy9hcHAvcHJvZmlsZS9yZWZlcmVuY2UvcmVmZXJlbmNlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNjLXJlZmVyZW5jZSBwe1xuICAgIGZvbnQtd2VpZ2h0OiAxMDAwcHg7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIGZvbnQtc3R5bGU6IGJvbGQ7XG4gIH1cblxuICAuY2F0ZWdvcnkgcHtcbiAgICAgIHdpZHRoOiAxMCVcbiAgfSIsIi5jYy1yZWZlcmVuY2UgcCB7XG4gIGZvbnQtd2VpZ2h0OiAxMDAwcHg7XG4gIGNvbG9yOiBibGFjaztcbiAgZm9udC1zdHlsZTogYm9sZDtcbn1cblxuLmNhdGVnb3J5IHAge1xuICB3aWR0aDogMTAlO1xufSJdfQ== */";
-    /***/
-  },
-
-  /***/
-  "./src/app/profile/reference/reference.component.ts":
-  /*!**********************************************************!*\
-    !*** ./src/app/profile/reference/reference.component.ts ***!
-    \**********************************************************/
-
-  /*! exports provided: ReferenceComponent */
-
-  /***/
-  function srcAppProfileReferenceReferenceComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ReferenceComponent", function () {
-      return ReferenceComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
-    var ReferenceComponent = /*#__PURE__*/function () {
-      function ReferenceComponent() {
-        _classCallCheck(this, ReferenceComponent);
-      }
-
-      _createClass(ReferenceComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }]);
-
-      return ReferenceComponent;
-    }();
-
-    ReferenceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-reference',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./reference.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/reference/reference.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./reference.component.scss */
-      "./src/app/profile/reference/reference.component.scss"))["default"]]
-    })], ReferenceComponent);
-    /***/
-  },
-
-  /***/
   "./src/app/profile/skills/skills.component.scss":
   /*!******************************************************!*\
     !*** ./src/app/profile/skills/skills.component.scss ***!
@@ -2550,6 +2459,58 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./skills.component.scss */
       "./src/app/profile/skills/skills.component.scss"))["default"]]
     })], SkillsComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/router-guard/router-guard.component.ts":
+  /*!********************************************************!*\
+    !*** ./src/app/router-guard/router-guard.component.ts ***!
+    \********************************************************/
+
+  /*! exports provided: RedirectGuard */
+
+  /***/
+  function srcAppRouterGuardRouterGuardComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RedirectGuard", function () {
+      return RedirectGuard;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var RedirectGuard = /*#__PURE__*/function () {
+      function RedirectGuard() {
+        _classCallCheck(this, RedirectGuard);
+      }
+
+      _createClass(RedirectGuard, [{
+        key: "canActivate",
+        value: function canActivate(route, state) {
+          window.location.href = route.data.externalUrl;
+          return true;
+        }
+      }]);
+
+      return RedirectGuard;
+    }();
+
+    RedirectGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], RedirectGuard);
     /***/
   },
 

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReferenceComponent } from './reference.component';
+import { RouterGuardComponent } from './router-guard.component';
 
-describe('ReferenceComponent', () => {
-  let component: ReferenceComponent;
-  let fixture: ComponentFixture<ReferenceComponent>;
+describe('RouterGuardComponent', () => {
+  let component: RouterGuardComponent;
+  let fixture: ComponentFixture<RouterGuardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReferenceComponent ]
+      declarations: [ RouterGuardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReferenceComponent);
+    fixture = TestBed.createComponent(RouterGuardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

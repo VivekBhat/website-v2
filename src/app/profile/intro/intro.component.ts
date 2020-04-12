@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss'],
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
+  providers: [Location]
 
 })
 export class IntroComponent implements OnInit {
