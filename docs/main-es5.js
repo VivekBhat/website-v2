@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"section\" id=\"about\">\n  <div class=\"container\">\n    <div class=\"card\" data-aos=\"fade-up\" data-aos-offset=\"10\">\n      <div class=\"row\">\n        <div class=\"col-lg-6 col-md-12\">\n          <div class=\"card-body\">\n            <div class=\"h4 mt-0 title\">About Me</div>\n            <p>Hi I'm <strong>Vivek Bhat</strong>. {{about1}}</p>\n            <p>{{about2}}</p>\n            <p>{{about3}}</p>\n            <p>{{about4}}</p>\n          </div>\n        </div>\n        <div class=\"col-lg-6 col-md-12\">\n          <div class=\"card-body\">\n            <div class=\"h4 mt-0 title\">Basic Information</div>\n            <div class=\"row\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Date of Birth:</strong>\n              </div>\n              <div class=\"col-sm-8\">May 17, 1993</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Email:</strong>\n              </div>\n              <div class=\"col-sm-8\">bhatvivek93@gmail.com</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Phone:</strong>\n              </div>\n              <div class=\"col-sm-8\">+1 (919) 945-6945</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Address:</strong>\n              </div>\n              <div class=\"col-sm-8\"> Beaverton, Oregon USA\n              </div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Language:</strong>\n              </div>\n              <div class=\"col-sm-8\">English, Hindi</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"section\" id=\"about\">\n  <div class=\"container\">\n    <div class=\"card\" data-aos=\"fade-up\" data-aos-offset=\"10\">\n      <div class=\"row\">\n        <div class=\"col-lg-6 col-md-12\">\n          <div class=\"card-body\">\n            <div class=\"h4 mt-0 title\">About Me</div>\n            <p>Hi I'm <strong>Vivek Bhat</strong>.</p>\n            <ng-container *ngFor=\"let about of about$ | async\">\n              <p>{{about}}</p>\n            </ng-container>\n          </div>\n        </div>\n        <div class=\"col-lg-6 col-md-12\">\n          <div class=\"card-body\">\n            <div class=\"h4 mt-0 title\">Basic Information</div>\n            <div class=\"row\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Date of Birth:</strong>\n              </div>\n              <div class=\"col-sm-8\">May 17, 1993</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Email:</strong>\n              </div>\n              <div class=\"col-sm-8\">bhatvivek93@gmail.com</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Phone:</strong>\n              </div>\n              <div class=\"col-sm-8\">+1 (919) 945-6945</div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Address:</strong>\n              </div>\n              <div class=\"col-sm-8\"> Beaverton, Oregon USA\n              </div>\n            </div>\n            <div class=\"row mt-3\">\n              <div class=\"col-sm-4\">\n                <strong class=\"text-uppercase\">Language:</strong>\n              </div>\n              <div class=\"col-sm-8\">English, Hindi</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
     /***/
   },
 
@@ -1132,24 +1132,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _services_about_about_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../../services/about/about.service */
+    "./src/app/services/about/about.service.ts");
 
     var AboutComponent = /*#__PURE__*/function () {
-      function AboutComponent() {
+      function AboutComponent(aboutService) {
         _classCallCheck(this, AboutComponent);
 
-        this.about1 = '' + 'I am an AWS Certified Solutions Architect and Developer Associate specializing in three-tier web applications. ';
-        this.about2 = 'I have experience with all stages of the development cycle for dynamic web projects, ' + '2.5 years of progressive experience in Angular, HTML, CSS, Typescript developer.' + 'My team works in an Agile environment, possess creative Design Thinking skills and dedicated to work effectively in ' + 'dynamic environments. ';
-        this.about3 = 'In my free time I love listening to music, playing soccer, cricket, swimming and hiking.';
-        this.about4 = 'Lover of innovation and everything related to generate new knowledge. ' + 'Face problems with a smile and solve them as soon as possible. Very calculated about the time I spend and work I do.\n';
+        this.aboutService = aboutService;
       }
 
       _createClass(AboutComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.about$ = this.aboutService.getAbout().pipe();
+        }
       }]);
 
       return AboutComponent;
     }();
+
+    AboutComponent.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+          args: [_services_about_about_service__WEBPACK_IMPORTED_MODULE_2__["AboutServiceToken"]]
+        }]
+      }];
+    };
 
     AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-about',
@@ -1159,7 +1174,85 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./about.component.scss */
       "./src/app/profile/about/about.component.scss"))["default"]]
-    })], AboutComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_services_about_about_service__WEBPACK_IMPORTED_MODULE_2__["AboutServiceToken"]))], AboutComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/profile/about/about.module.ts":
+  /*!***********************************************!*\
+    !*** ./src/app/profile/about/about.module.ts ***!
+    \***********************************************/
+
+  /*! exports provided: AboutModule */
+
+  /***/
+  function srcAppProfileAboutAboutModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AboutModule", function () {
+      return AboutModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var _about_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./about.component */
+    "./src/app/profile/about/about.component.ts");
+    /* harmony import */
+
+
+    var _services_about_about_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../../services/about/about.service */
+    "./src/app/services/about/about.service.ts");
+    /* harmony import */
+
+
+    var _services_about_mock_about_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../services/about/mock-about.service */
+    "./src/app/services/about/mock-about.service.ts");
+
+    var AboutModule = function AboutModule() {
+      _classCallCheck(this, AboutModule);
+    };
+
+    AboutModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"]],
+      declarations: [_about_component__WEBPACK_IMPORTED_MODULE_4__["AboutComponent"]],
+      exports: [_about_component__WEBPACK_IMPORTED_MODULE_4__["AboutComponent"]],
+      providers: [{
+        provide: _services_about_about_service__WEBPACK_IMPORTED_MODULE_5__["AboutServiceToken"],
+        useClass: _services_about_mock_about_service__WEBPACK_IMPORTED_MODULE_6__["MockAboutService"]
+      }]
+    })], AboutModule);
     /***/
   },
 
@@ -1932,65 +2025,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _about_about_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ./about/about.component */
-    "./src/app/profile/about/about.component.ts");
-    /* harmony import */
-
-
-    var _skills_skills_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _skills_skills_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./skills/skills.component */
     "./src/app/profile/skills/skills.component.ts");
     /* harmony import */
 
 
-    var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./portfolio/portfolio.component */
     "./src/app/profile/portfolio/portfolio.component.ts");
     /* harmony import */
 
 
-    var _experience_experience_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _experience_experience_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./experience/experience.component */
     "./src/app/profile/experience/experience.component.ts");
     /* harmony import */
 
 
-    var _education_education_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _education_education_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ./education/education.component */
     "./src/app/profile/education/education.component.ts");
     /* harmony import */
 
 
-    var _reference_reference_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _reference_reference_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./reference/reference.component */
     "./src/app/profile/reference/reference.component.ts");
     /* harmony import */
 
 
-    var _contact_contact_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./contact/contact.component */
     "./src/app/profile/contact/contact.component.ts");
     /* harmony import */
 
 
-    var ngx_spinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var ngx_spinner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ngx-spinner */
     "./node_modules/ngx-spinner/fesm2015/ngx-spinner.js");
     /* harmony import */
 
 
-    var _projects_projects_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _projects_projects_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! ./projects/projects.module */
     "./src/app/profile/projects/projects.module.ts");
+    /* harmony import */
+
+
+    var _about_about_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    /*! ./about/about.module */
+    "./src/app/profile/about/about.module.ts");
 
     var ProfileModule = function ProfileModule() {
       _classCallCheck(this, ProfileModule);
     };
 
     ProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _projects_projects_module__WEBPACK_IMPORTED_MODULE_17__["ProjectsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyModule"], ngx_spinner__WEBPACK_IMPORTED_MODULE_16__["NgxSpinnerModule"]],
-      declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"], _intro_intro_component__WEBPACK_IMPORTED_MODULE_8__["IntroComponent"], _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"], _skills_skills_component__WEBPACK_IMPORTED_MODULE_10__["SkillsComponent"], _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_11__["PortfolioComponent"], _experience_experience_component__WEBPACK_IMPORTED_MODULE_12__["ExperienceComponent"], _education_education_component__WEBPACK_IMPORTED_MODULE_13__["EducationComponent"], _reference_reference_component__WEBPACK_IMPORTED_MODULE_14__["ReferenceComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_15__["ContactComponent"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _projects_projects_module__WEBPACK_IMPORTED_MODULE_16__["ProjectsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyModule"], _about_about_module__WEBPACK_IMPORTED_MODULE_17__["AboutModule"], ngx_spinner__WEBPACK_IMPORTED_MODULE_15__["NgxSpinnerModule"]],
+      declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"], _intro_intro_component__WEBPACK_IMPORTED_MODULE_8__["IntroComponent"], _skills_skills_component__WEBPACK_IMPORTED_MODULE_9__["SkillsComponent"], _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"], _experience_experience_component__WEBPACK_IMPORTED_MODULE_11__["ExperienceComponent"], _education_education_component__WEBPACK_IMPORTED_MODULE_12__["EducationComponent"], _reference_reference_component__WEBPACK_IMPORTED_MODULE_13__["ReferenceComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"]],
       providers: [{
         provide: 'SnotifyToastConfig',
         useValue: ng_snotify__WEBPACK_IMPORTED_MODULE_4__["ToastDefaults"]
@@ -2458,6 +2551,94 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./src/app/profile/skills/skills.component.scss"))["default"]]
     })], SkillsComponent);
     /***/
+  },
+
+  /***/
+  "./src/app/services/about/about.service.ts":
+  /*!*************************************************!*\
+    !*** ./src/app/services/about/about.service.ts ***!
+    \*************************************************/
+
+  /*! exports provided: AboutServiceToken */
+
+  /***/
+  function srcAppServicesAboutAboutServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AboutServiceToken", function () {
+      return AboutServiceToken;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var AboutServiceToken = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('AboutService');
+    /***/
+  },
+
+  /***/
+  "./src/app/services/about/mock-about.service.ts":
+  /*!******************************************************!*\
+    !*** ./src/app/services/about/mock-about.service.ts ***!
+    \******************************************************/
+
+  /*! exports provided: MockAboutService */
+
+  /***/
+  function srcAppServicesAboutMockAboutServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MockAboutService", function () {
+      return MockAboutService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var MockAboutService = /*#__PURE__*/function () {
+      function MockAboutService() {
+        _classCallCheck(this, MockAboutService);
+      }
+
+      _createClass(MockAboutService, [{
+        key: "getAbout",
+        value: function getAbout() {
+          var about = 'I am an AWS Certified Solutions Architect and Developer Associate specializing in three-tier web applications. \n' + 'I have experience with all stages of the development cycle for dynamic web projects, ' + '2.5 years of progressive experience in Angular, HTML, CSS, Typescript development. ' + 'We work in an Agile environment, possess creative design thinking skills and dedicated to work effectively in ' + 'dynamic environments. \n' + 'In my free time I love listening to music, playing soccer, cricket, swimming and go hiking. ' + 'I am a lover of innovation and everything that would increase my set of skills and knowledge. \n' + 'I face problems with a smile and solve quickly. Very calculative about the work I do and time I spend. \n';
+          var arr = about.split('\n');
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(arr);
+        }
+      }]);
+
+      return MockAboutService;
+    }();
+    /***/
+
   },
 
   /***/

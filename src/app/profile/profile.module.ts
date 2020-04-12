@@ -6,7 +6,6 @@ import {ProfileComponent} from './profile.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {IntroComponent} from './intro/intro.component';
-import {AboutComponent} from './about/about.component';
 import {SkillsComponent} from './skills/skills.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
 import {ExperienceComponent} from './experience/experience.component';
@@ -15,6 +14,7 @@ import {ReferenceComponent} from './reference/reference.component';
 import {ContactComponent} from './contact/contact.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {ProjectsModule} from './projects/projects.module';
+import {AboutModule} from './about/about.module';
 
 @NgModule({
   imports: [
@@ -22,6 +22,7 @@ import {ProjectsModule} from './projects/projects.module';
     ProjectsModule,
     FormsModule,
     SnotifyModule,
+    AboutModule,
     NgxSpinnerModule
   ],
   declarations: [
@@ -29,7 +30,6 @@ import {ProjectsModule} from './projects/projects.module';
     HeaderComponent,
     FooterComponent,
     IntroComponent,
-    AboutComponent,
     SkillsComponent,
     PortfolioComponent,
     ExperienceComponent,
