@@ -1,25 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// https://atom-morgan.github.io/how-to-test-angular-canactivate-guards/
 
-import { RouterGuardComponent } from './router-guard.component';
+export class MockRouter {
 
-describe('RouterGuardComponent', () => {
-  let component: RouterGuardComponent;
-  let fixture: ComponentFixture<RouterGuardComponent>;
+  queryParams = {
+    returnUrl: undefined
+  };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ RouterGuardComponent ]
-    })
-    .compileComponents();
-  }));
+  navigate(path, queryParams) {
+  }
+}
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(RouterGuardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+describe('RouterGuard', () => {
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

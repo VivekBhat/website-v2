@@ -3,7 +3,7 @@ import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {ProfileComponent} from './profile/profile.component';
 import {RedirectGuard} from './router-guard/router-guard.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', component: ProfileComponent, pathMatch: 'full'},
   {
     path: 'resume',

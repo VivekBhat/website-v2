@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
+
 })
 export class HeaderComponent implements OnInit {
   ids: Array<string> = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'contact'];
