@@ -1,60 +1,60 @@
-# https://coryrylan.com/blog/building-angular-cli-projects-with-github-actions
-
-name: Build
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  Build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-
-    steps:
-      - uses: actions/checkout@v1
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: npm ci and npm run build
-        run: |
-          npm ci
-          npm run build:ci
-
-      - name: move to dir
-        run: |
-          mkdir -p output
-          yes| cp -rf dist/ ./output/
-
-      - name: Add CNAME
-        run: echo "vivekbhat.me" > dist/CNAME
-
-      - name: Running command
-        run: ls
-
-      - name: Dist folder
-        run: ls dist
-
-      - name: Commit files
-        run: |
-          git config --local user.email "vivek.bhat@intel.com"
-          git config --local user.name "bhatvive"
-          git commit -m "Add changes" -a
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+## https://coryrylan.com/blog/building-angular-cli-projects-with-github-actions
+#
+#name: Build
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#jobs:
+#  Build:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: [12.x]
+#
+#    steps:
+#      - uses: actions/checkout@v1
+#
+#      - name: Cache node modules
+#        uses: actions/cache@v1
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#          restore-keys: |
+#            ${{ runner.os }}-node-
+#
+#      - name: Node ${{ matrix.node-version }}
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: ${{ matrix.node-version }}
+#
+#      - name: npm ci and npm run build
+#        run: |
+#          npm ci
+#          npm run build:ci
+#
+#      - name: move to dir
+#        run: |
+#          mkdir -p output
+#          yes| cp -rf dist/ ./output/
+#
+#      - name: Add CNAME
+#        run: echo "vivekbhat.me" > dist/CNAME
+#
+#      - name: Running command
+#        run: ls
+#
+#      - name: Dist folder
+#        run: ls dist
+#
+#      - name: Commit files
+#        run: |
+#          git config --local user.email "vivek.bhat@intel.com"
+#          git config --local user.name "bhatvive"
+#          git commit -m "Add changes" -a
+#
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
