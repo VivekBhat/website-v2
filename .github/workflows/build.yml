@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
-          path: public
+          path: dist
 
   Download-Artifacts:
     runs-on: ubuntu-latest
