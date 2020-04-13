@@ -34,6 +34,9 @@ jobs:
           npm ci
           npm run build:ci
 
+      - name: Running command
+        run: ls
+
       - name: upload artifacts
         uses: actions/upload-artifact@master
         with:
