@@ -48,40 +48,13 @@ jobs:
       - name: Dist folder
         run: ls dist
 
-      - name: Key
-        run: echo "123${{ secrets.GITHUB_TOKEN }}123"
-
-      - name: check git config
+      - name: Commit files
         run: |
-          git config --global user.email "vivek.bhat@intel.com"
-          git config --global user.name "bhatvive"
           git config --local user.email "vivek.bhat@intel.com"
           git config --local user.name "bhatvive"
-          git config --global commit.gpgsign true
-          git config -l
-
-      - name: Commit files
-        shell: bash
-        run: |
-          git add dist/
-          git commit -S -m "dist added"
-        env:
-          GIT_TRACE: 1
+          git commit -m "Add changes" -a
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          branch: B77
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
-
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-
-  #      - name: upload artifacts
-  #        uses: actions/upload-artifact@master
-  #        with:
-  #          name: webpack artifacts
-  #          path: dist
