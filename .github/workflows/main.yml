@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Ci Init
+      - name: CI Init
         run: npm ci
 
       - name: Cleaning repo
@@ -40,5 +40,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_CONFIG_NAME: bhatvive
+          GIT_CONFIG_EMAIL: vivek.bhat@intel.com
+          CLEAN_EXCLUDE: '["CNAME"]'
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          FOLDER: dist # The folder the action should deploy.
