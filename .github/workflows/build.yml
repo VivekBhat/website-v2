@@ -1,3 +1,5 @@
+# https://coryrylan.com/blog/building-angular-cli-projects-with-github-actions
+
 name: Build
 on:
   push:
@@ -31,3 +33,35 @@ jobs:
         run: |
           npm ci
           npm run build:ci
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
+
+
+    download-artifacts:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node-version: [12.x]
+
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v1
+
+#        - name: Download built artifact
+#          uses: actions/download-artifact@master
+#          with:
+#            name: webpack artifacts
+#            path: public
+
+        - name: Download built artifact
+          uses: actions/download-artifact@v1
+          with:
+            name: my-artifact
+            path: temp/artifact
+
+        - name: Running command
+          run: ls temp/artifact
