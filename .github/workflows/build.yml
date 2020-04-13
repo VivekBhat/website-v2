@@ -45,12 +45,19 @@ jobs:
       - name: Running command
         run: ls
 
+      - name: Dist folder
+        run: ls dist
+
+      - name: Key
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+
       - name: check git config
         run: |
           git config --global user.email "vivekbhat@live.com"
           git config --global user.name "vivekbhat"
           git config --local user.email "vivekbhat@live.com"
           git config --local user.name "vivekbhat"
+          git config --global commit.gpgsign true
           git config -l
 
       - name: Commit files
