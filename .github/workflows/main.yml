@@ -36,11 +36,13 @@ jobs:
       - name: Build
         run:  npm run build:prod
 
+      - name: SEEEEEE 1
+        run:  ls -R
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: SEEEEEE
+      - name: SEEEEEE 2
         run:  ls -R
 
       - name: Deploy 🚀
