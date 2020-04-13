@@ -37,6 +37,9 @@ jobs:
       - name: Running command
         run: ls
 
+      - name: Add CNAME
+        run: echo "vivekbhat.me" > dist/CNAME
+
       - name: upload artifacts
         uses: actions/upload-artifact@master
         with:
