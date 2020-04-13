@@ -41,7 +41,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           base_href: /
