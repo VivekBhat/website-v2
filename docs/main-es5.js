@@ -874,13 +874,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/app-routing.module.ts ***!
     \***************************************/
 
-  /*! exports provided: AppRoutingModule */
+  /*! exports provided: routes, AppRoutingModule */
 
   /***/
   function srcAppAppRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "routes", function () {
+      return routes;
+    });
     /* harmony export (binding) */
 
 
@@ -1668,6 +1674,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./header.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/header/header.component.html"))["default"],
+      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], {
+        provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
+        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
+      }],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./header.component.scss */
       "./src/app/profile/header/header.component.scss"))["default"]]
@@ -1773,7 +1783,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./intro.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/intro/intro.component.html"))["default"],
-      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]],
+      providers: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], {
+        provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
+        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
+      }],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./intro.component.scss */
       "./src/app/profile/intro/intro.component.scss"))["default"]]
@@ -2070,10 +2083,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _projects_projects_module__WEBPACK_IMPORTED_MODULE_15__["ProjectsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyModule"], _about_about_module__WEBPACK_IMPORTED_MODULE_16__["AboutModule"], ngx_spinner__WEBPACK_IMPORTED_MODULE_14__["NgxSpinnerModule"]],
       declarations: [_profile_component__WEBPACK_IMPORTED_MODULE_5__["ProfileComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"], _intro_intro_component__WEBPACK_IMPORTED_MODULE_8__["IntroComponent"], _skills_skills_component__WEBPACK_IMPORTED_MODULE_9__["SkillsComponent"], _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"], _experience_experience_component__WEBPACK_IMPORTED_MODULE_11__["ExperienceComponent"], _education_education_component__WEBPACK_IMPORTED_MODULE_12__["EducationComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"]],
-      providers: [{
+      providers: [ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyService"], {
         provide: 'SnotifyToastConfig',
         useValue: ng_snotify__WEBPACK_IMPORTED_MODULE_4__["ToastDefaults"]
-      }, ng_snotify__WEBPACK_IMPORTED_MODULE_4__["SnotifyService"]]
+      }, _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], {
+        provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"],
+        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"]
+      }]
     })], ProfileModule);
     /***/
   },

@@ -6,12 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean": "rimraf ./dist",
     "build:prod": "ng build --prod",
     "ci_test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
-    "build:ci": "npm run clean && npm run test && npm run build:prod"
+    "build:ci": "npm run clean && npm run ci_test && npm run build:prod"
   },
   "private": true,
   "dependencies": {
