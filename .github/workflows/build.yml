@@ -34,12 +34,12 @@ jobs:
           npm ci
           npm run build:ci
 
-      - name: upload artifacts
-        uses: actions/upload-artifact@master
-        with:
-          name: webpack artifacts
-          path: public/
-
+#      - name: upload artifacts
+#        uses: actions/upload-artifact@master
+#        with:
+#          name: webpack artifacts
+#          path: public
+#
 
   Download-Artifacts:
     runs-on: ubuntu-latest
