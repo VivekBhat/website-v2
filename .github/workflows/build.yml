@@ -49,14 +49,14 @@ jobs:
         run: ls dist
 
       - name: Key
-        run: echo ${{ secrets.GITHUB_TOKEN }}
+        run: echo "123${{ secrets.GITHUB_TOKEN }}123"
 
       - name: check git config
         run: |
-          git config --global user.email "vivekbhat@live.com"
-          git config --global user.name "vivekbhat"
-          git config --local user.email "vivekbhat@live.com"
-          git config --local user.name "vivekbhat"
+          git config --global user.email "vivek.bhat@intel.com"
+          git config --global user.name "bhatvive"
+          git config --local user.email "vivek.bhat@intel.com"
+          git config --local user.name "bhatvive"
           git config --global commit.gpgsign true
           git config -l
 
