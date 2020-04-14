@@ -39,16 +39,12 @@ jobs:
       - name: See
         run:  ls -R
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      - name: deploy docs
+        uses: ./
         with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          REPOSITORY_NAME: VivekBhat/vivekbhat.github.io
-          base_href: /
-          build_configuration: production
-          BRANCH: gh-pages
-          FOLDER: dist # The folder the action should deploy.
-
+          username: ${{ secrets.GITHUB_USERNAME }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          remote_url: https://github.com/vivekbhat/vivekbhat.github.io.git
 
 #  build:
 #
