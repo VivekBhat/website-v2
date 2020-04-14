@@ -9,7 +9,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 
 })
 export class HeaderComponent implements OnInit {
-  ids: Array<string> = ['about', 'education', 'skills', 'experience', 'projects', 'resume', 'contact'];
+  ids: Array<string> = ['about', 'education', 'skills', 'experience', 'resume'];
 
   constructor(private location: Location) { }
 
