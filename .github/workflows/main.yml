@@ -34,18 +34,17 @@ jobs:
         run: npm run ci_test
 
       - name: Build
-        run:  npm run build:deploy
+        run:  npm run build:prod
 
       - name: See
         run:  ls -R
 
-#      - name: deploy docs
-#        uses: ./
-#        with:
-#          username: ${{ secrets.GITHUB_USERNAME }}
-#          password: ${{ secrets.GITHUB_TOKEN }}
-#          pages_directory: dist
-#          remote_url: https://github.com/vivekbhat/vivekbhat.github.io.git
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
 
 #  build:
 #
