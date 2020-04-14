@@ -36,6 +36,9 @@ jobs:
       - name: Build
         run:  npm run build:prod
 
+      - name: See
+        run:  ls -R
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
