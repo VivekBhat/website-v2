@@ -18,6 +18,22 @@
                 <a class="nav-link pointer smooth-scroll" (click)="onClick(link)">{{link}}</a>
               </li>
             </ng-container>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+                Projects
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item pointer smooth-scroll" (click)="onClick('portfolio')">Portfolios</a>
+                <a class="dropdown-item pointer smooth-scroll" (click)="onClick('oss-projects')">Open Source
+                  Projects</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item pointer smooth-scroll" (click)="onClick('other-projects')">Other Projects</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer smooth-scroll" (click)="onClick('contact')">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
