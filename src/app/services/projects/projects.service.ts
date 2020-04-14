@@ -45,7 +45,7 @@ export class ProjectsService {
             ' 4. Be able to automatically setup a job to build this repo'
         }, {
           title: 'Serverless Thumbnail Generator',
-          imgName: 'other_1',
+          imgName: 'other_thumbnail_generator',
           technology: 'Serverless, AWS, Vagrant',
           gitHubLink: 'serverless-thumbnail-aws',
           moreData: ' In this project I am using the serverless deployment template to deploy a serverless app. \n' +
