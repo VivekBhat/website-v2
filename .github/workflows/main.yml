@@ -43,8 +43,9 @@ jobs:
           REPOSITORY_NAME: VivekBhat/vivekbhat.github.io
           base_href: /
           build_configuration: production
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: . # The folder the action should deploy.
+          BRANCH: master
+          FOLDER: dist # The folder the action should deploy.
+
 
 #  build:
 #
