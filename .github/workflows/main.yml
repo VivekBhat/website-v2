@@ -34,17 +34,18 @@ jobs:
         run: npm run ci_test
 
       - name: Build
-        run:  npm run build:prod
+        run:  npm run build:deploy
 
       - name: See
         run:  ls -R
 
-      - name: deploy docs
-        uses: ./
-        with:
-          username: ${{ secrets.GITHUB_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          remote_url: https://github.com/vivekbhat/vivekbhat.github.io.git
+#      - name: deploy docs
+#        uses: ./
+#        with:
+#          username: ${{ secrets.GITHUB_USERNAME }}
+#          password: ${{ secrets.GITHUB_TOKEN }}
+#          pages_directory: dist
+#          remote_url: https://github.com/vivekbhat/vivekbhat.github.io.git
 
 #  build:
 #
