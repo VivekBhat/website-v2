@@ -1,4 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {ContactService, ContactServiceToken} from '../../services/contact/contact.service';
+import {Contact} from '../../models/contact';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AboutService, AboutServiceToken} from '../../services/about/about.service';
+import {BackendContactService} from '../../services/contact/backend-contact.service';
+
+// https://www.truecodex.com/course/angular-project-training/create-contact-form-and-send-data-on-email-angular
 
 @Component({
   selector: 'app-contact',
@@ -7,36 +14,42 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  model: any = {};
 
-  constructor() {
-  }
+  model: Contact;
+  submitted = false;
+  success = false;
+  error: {};
+  name = new FormControl('');
+  contactFormGroup: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    name: new FormControl('', [Validators.required]),
+    message: new FormControl('', [Validators.required]),
+    phoneNumber: new FormControl('', [Validators.required]),
+  });
+
+  constructor(@Inject(ContactServiceToken) private contactService: ContactService) { }
 
   ngOnInit() {
   }
 
 
-  // snotifyConfig = environment.snotifyConfig;
-  // model: any = {};
-
-  // constructor(
-  //   private profile: ProfileService,
-  //   private snotify: SnotifyService
-  // ) { }
-
-  // ngOnInit() {
-  // }
-
-  // contact() {
-  //   this.profile.contactus(this.model).subscribe(data => {
-  //     if (data.status) {
-  //       this.snotify.success(data.message, 'Success', this.snotifyConfig);
-  //     } else {
-  //       this.snotify.warning(data.message, 'Warning', this.snotifyConfig);
-  //     }
-  //   }, err => {
-  //     this.snotify.error('Something went wrong. Try again later.', 'Error', this.snotifyConfig);
-  //   });
-  // }
+  onSubmit() {
+    this.submitted = true;
+    console.log(this.contactFormGroup);
+    const getVal = field => this.contactFormGroup.get(field).value;
+    this.model = new Contact(
+      getVal('name'),
+      getVal('email'),
+      getVal('phoneNumber'),
+      getVal('message'));
+    console.log(this.model);
+    return this.contactService.contactForm(this.model).subscribe(
+      () => {
+        this.success = true;
+        this.contactFormGroup.reset();
+      },
+      error => this.error = error
+    );
+  }
 
 }

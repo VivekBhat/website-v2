@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule, Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ProfileComponent} from './profile.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
@@ -9,10 +9,10 @@ import {SkillsComponent} from './skills/skills.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
 import {ExperienceComponent} from './experience/experience.component';
 import {EducationComponent} from './education/education.component';
-import {ContactComponent} from './contact/contact.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {ProjectsModule} from './projects/projects.module';
 import {AboutModule} from './about/about.module';
+import {ContactModule} from './contact/contact.module';
 
 @NgModule({
   imports: [
@@ -20,6 +20,7 @@ import {AboutModule} from './about/about.module';
     ProjectsModule,
     FormsModule,
     AboutModule,
+    ContactModule,
     NgxSpinnerModule
   ],
   declarations: [
@@ -30,9 +31,9 @@ import {AboutModule} from './about/about.module';
     SkillsComponent,
     PortfolioComponent,
     ExperienceComponent,
-    EducationComponent,
-    ContactComponent
+    EducationComponent
   ],
+
   providers: [
     Location, {provide: LocationStrategy, useClass: PathLocationStrategy}
   ]

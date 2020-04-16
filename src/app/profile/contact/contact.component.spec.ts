@@ -1,7 +1,10 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ContactComponent} from './contact.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {ContactServiceToken} from '../../services/contact/contact.service';
+import {BackendContactService} from '../../services/contact/backend-contact.service';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -10,7 +13,10 @@ describe('ContactComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ContactComponent],
-      imports: [FormsModule]
+      imports: [FormsModule, ReactiveFormsModule, HttpClientTestingModule],
+      providers: [
+        {provide: ContactServiceToken, useClass: BackendContactService}
+      ]
     })
       .compileComponents();
   }));
