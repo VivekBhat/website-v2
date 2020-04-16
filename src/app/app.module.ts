@@ -7,6 +7,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {RedirectGuard} from './router-guard/router-guard.component';
+import {environment} from '../environments/environment';
+import {BuildInformationToken} from './services/build-information';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {RedirectGuard} from './router-guard/router-guard.component';
     ProfileModule,
     HttpClientModule
   ],
-  providers: [RedirectGuard],
+  providers: [RedirectGuard,
+    {provide: BuildInformationToken, useValue: environment.build},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

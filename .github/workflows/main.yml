@@ -8,6 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - run: VERSION=$(node -p "require('./package.json').version")
+      - run: BUILD_TIME=$(TZ=America/Los_Angeles date)
+      - run: sed -i "s/CI_COMMIT_SHORT_SHA/${CI_COMMIT_SHA:0:8}/" src/environments/*.ts
+      - run: sed -i "s/CI_PIPELINE_ID/$CI_PIPELINE_ID/" src/environments/*.ts
+      - run: sed -i "s/BUILD_TIME/$BUILD_TIME/" src/environments/*.ts
+      - run: sed -i "s/VERSION/$VERSION/" src/environments/*.ts
+
+      - name: checking environment variables
+        run: printenv
+
       - name: Checkout repo
         uses: actions/checkout@v1
 
