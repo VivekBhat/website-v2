@@ -51,8 +51,8 @@ jobs:
 
       - name: See
         run:  |
-          ls -R
           cat src/environments/*.ts
+          ls -R
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3

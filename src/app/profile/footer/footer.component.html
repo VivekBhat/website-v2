@@ -19,7 +19,9 @@
     </p>
   </div>
   <div class="text-center text-muted">
-    RPA v{{buildInformation.version || '0.0.0' }}, commit: {{buildInformation.commit || 'unknown'}},
-    built: {{buildInformation.buildTime || 'locally' }} (pipeline #{{buildInformation.buildPipeline || 0}}) |
+    <b>Version:</b> v{{buildInformation.version || '0.0.0' }},
+    <b>commit:</b> {{buildInformation.commit || 'unknown'}},
+    <b>built:</b> {{buildInformation.buildTime || 'locally' }}
+    (<b>pipeline</b> #{{buildInformation.buildPipeline || 0}}) |
   </div>
 </footer>
