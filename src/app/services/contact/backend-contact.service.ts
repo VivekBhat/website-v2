@@ -29,7 +29,7 @@ export class BackendContactService implements ContactService {
   }
 
   getClientInfo(): Observable<IpInfo> {
-    const ipServiceURL = 'http://ip-api.com/json';
+    const ipServiceURL = 'https://ip-api.com/json';
     return this.http.get<IpInfoResponse>(ipServiceURL).pipe(map(response => IpInfoConverter.convert(response)));
   }
 
