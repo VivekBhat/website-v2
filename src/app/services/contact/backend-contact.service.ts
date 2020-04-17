@@ -1,10 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import {catchError} from 'rxjs/operators';
+import {catchError, map} from 'rxjs/operators';
 import {Contact} from '../../models/contact';
 import {FormspreeResponse} from '../../models/response/formspree.response';
 import {ContactService} from './contact.service';
+import {IpInfoConverter, IpInfoResponse} from '../../responses/ip-info.response';
+import {IpInfo} from '../../models/ip-info/ip-info';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +26,11 @@ export class BackendContactService implements ContactService {
     return this.http.post<FormspreeResponse>(this.ServerUrl, formdata, this.httpOptions).pipe(
       catchError(this.handleError)
     );
+  }
+
+  getClientInfo(): Observable<IpInfo> {
+    const ipServiceURL = 'http://ip-api.com/json';
+    return this.http.get<IpInfoResponse>(ipServiceURL).pipe(map(response => IpInfoConverter.convert(response)));
   }
 
   private handleError(error: HttpErrorResponse) {

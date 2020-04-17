@@ -2,8 +2,6 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {ContactService, ContactServiceToken} from '../../services/contact/contact.service';
 import {Contact} from '../../models/contact';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {AboutService, AboutServiceToken} from '../../services/about/about.service';
-import {BackendContactService} from '../../services/contact/backend-contact.service';
 
 // https://www.truecodex.com/course/angular-project-training/create-contact-form-and-send-data-on-email-angular
 
@@ -29,8 +27,7 @@ export class ContactComponent implements OnInit {
 
   constructor(@Inject(ContactServiceToken) private contactService: ContactService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 
   onSubmit() {
