@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
         );
         return this.contactService.contactForm(email);
       })
-    ).subscribe(val => console.log('Sent'));
+    ).subscribe();
 
   }
 

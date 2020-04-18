@@ -32,7 +32,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.contactFormGroup);
     const getVal = field => this.contactFormGroup.get(field).value;
     this.model = new Contact(
       getVal('name'),

@@ -21,7 +21,6 @@ export interface IpInfoResponse {
 @StaticImplements<Converter<IpInfoResponse, IpInfo>>()
 export class IpInfoConverter {
   static convert(from: IpInfoResponse) {
-    console.log('FROM: ', from);
     return new IpInfo(
       from.status,
       from.country,
