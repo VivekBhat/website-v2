@@ -55,5 +55,11 @@ export const otherProjects = [
     technology: 'AWS API Gateway, Lambda, DynamoDB, NodeJS',
     gitHubLink: 'serverless-nodejs-dynamodb-rest-api',
     readmeLink: 'https://raw.githubusercontent.com/VivekBhat/serverless-nodejs-dynamodb-rest-api/master/Readme.md'
+  }, {
+    title: 'Serverless EC2 Start Stop',
+    imgName: 'serverless-ec2-start-stop',
+    technology: 'AWS API Gateway, Lambda, DynamoDB, NodeJS',
+    gitHubLink: 'serverless-ec2-start-stop',
+    readmeLink: 'https://raw.githubusercontent.com/VivekBhat/serverless-ec2-start-stop/master/Readme.md'
   }
 ];
