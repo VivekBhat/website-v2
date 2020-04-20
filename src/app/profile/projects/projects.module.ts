@@ -4,11 +4,13 @@ import {OssProjectsComponent} from './oss-projects/oss-projects.component';
 import {CommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ProjectsService, ProjectsServiceToken} from '../../services/projects/projects.service';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    MarkdownModule.forRoot(),
   ],
   declarations: [
     ProjectsComponent,

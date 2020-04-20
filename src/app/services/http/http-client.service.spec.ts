@@ -32,7 +32,7 @@ describe('HttpClient', () => {
   });
 
   afterEach(() => {
-    // After every test, assert that there are no more pending requests.
+    // After every test, assert that there are no readmeLink pending requests.
     httpServer.verify();
   });
 

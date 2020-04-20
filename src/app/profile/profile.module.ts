@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule, Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {ProfileComponent} from './profile.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';

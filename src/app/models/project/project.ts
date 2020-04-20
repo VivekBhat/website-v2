@@ -1,5 +1,5 @@
 /**
- * note: Add a \n in moreData to properly get a new line
+ * note: Add a \n in readmeLink to properly get a new line
  *
  */
 
@@ -8,5 +8,5 @@ export interface Project {
   technology: string;
   imgName: string;
   gitHubLink: string;
-  moreData: string;
+  readmeLink: string;
 }

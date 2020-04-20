@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ProjectsService, ProjectsServiceToken} from '../../../services/projects/projects.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-oss-projects',
@@ -11,16 +13,23 @@ export class OssProjectsComponent implements OnInit {
   @Input() title = '';
   @Input() technology = '';
   @Input() img: '';
-  @Input() more: string = null;
+  @Input() readmeLink: string = null;
   @Input() githubLink: string = null;
   closeResult: string;
+  readme$: Observable<string>;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,
+              @Inject(ProjectsServiceToken) private projectService: ProjectsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.readme$ = this.projectService.getReadme(this.readmeLink).pipe();
+  }
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result
+  onClickMore(content) {
+    this.modalService.open(content, {
+      ariaLabelledBy: 'modal-basic-title',
+      size: 'lg'
+    }).result
       .then(result => {
         this.closeResult = `Closed with: ${result}`;
       }, reason => {
@@ -36,11 +45,5 @@ export class OssProjectsComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
-  }
-
-  getBody() {
-    console.log(this.more);
-    const arr = this.more.split('\n');
-    return this.more.split('\n');
   }
 }
