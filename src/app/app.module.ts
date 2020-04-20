@@ -9,7 +9,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {RedirectGuard} from './router-guard/router-guard.component';
 import {environment} from '../environments/environment';
 import {BuildInformationToken} from './services/build-information';
-import {ShowdownModule} from 'ngx-showdown';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import {ShowdownModule} from 'ngx-showdown';
     BrowserModule,
     AppRoutingModule,
     ProfileModule,
-    ShowdownModule.forRoot({emoji: true, noHeaderId: true, flavor: 'github'}),
     HttpClientModule
   ],
   providers: [RedirectGuard,
