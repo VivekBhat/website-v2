@@ -1,8 +1,9 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ProjectsComponent} from './projects.component';
-import {ProjectsService, ProjectsServiceToken} from '../../services/projects/projects.service';
 import {OssProjectsComponent} from './oss-projects/oss-projects.component';
+import {ProjectsServiceToken} from '../../services/projects/projects.service';
+import {MockProjectsService} from '../../services/projects/mock-projects.service';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -13,7 +14,7 @@ describe('ProjectsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ProjectsComponent, OssProjectsComponent],
       providers: [
-        {provide: ProjectsServiceToken, useClass: ProjectsService}
+        {provide: ProjectsServiceToken, useClass: MockProjectsService}
       ]
     }).compileComponents();
   }));

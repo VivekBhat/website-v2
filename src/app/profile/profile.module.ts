@@ -13,11 +13,12 @@ import {NgxSpinnerModule} from 'ngx-spinner';
 import {ProjectsModule} from './projects/projects.module';
 import {AboutModule} from './about/about.module';
 import {ContactModule} from './contact/contact.module';
+import {environment} from '../../environments/environment';
 
 @NgModule({
   imports: [
     CommonModule,
-    ProjectsModule,
+    ProjectsModule.forRoot(environment),
     FormsModule,
     AboutModule,
     ContactModule,

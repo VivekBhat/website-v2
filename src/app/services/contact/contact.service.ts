@@ -8,7 +8,6 @@ export const ContactServiceToken = new InjectionToken<ContactService>('ContactSe
 
 export interface ContactService {
 
-
   contactForm(contact: Contact): Observable<FormspreeResponse>;
 
   getClientInfo(): Observable<IpInfo>;

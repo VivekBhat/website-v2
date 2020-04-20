@@ -4,6 +4,8 @@ import {ProfileComponent} from './profile.component';
 import {ProfileModule} from './profile.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {BuildInformationToken} from '../services/build-information';
+import {ContactServiceToken} from '../services/contact/contact.service';
+import {MockContactService} from '../services/contact/mock-contact.service';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -12,7 +14,10 @@ describe('ProfileComponent', () => {
     TestBed.configureTestingModule({
       // declarations: [ProfileModule],
       imports: [ProfileModule, NoopAnimationsModule],
-      providers: [{provide: BuildInformationToken, useValue: {}}]
+      providers: [
+        {provide: BuildInformationToken, useValue: {}},
+        {provide: ContactServiceToken, useClass: MockContactService},
+      ]
     })
       .compileComponents();
   }));

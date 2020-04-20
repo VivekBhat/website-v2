@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OssProjectsComponent } from './oss-projects.component';
+import {OssProjectsComponent} from './oss-projects.component';
+import {ProjectsServiceToken} from '../../../services/projects/projects.service';
+import {MockProjectsService} from '../../../services/projects/mock-projects.service';
 
 describe('OssProjectsComponent', () => {
   let component: OssProjectsComponent;
@@ -8,9 +10,12 @@ describe('OssProjectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OssProjectsComponent ]
+      declarations: [OssProjectsComponent],
+      providers: [
+        {provide: ProjectsServiceToken, useClass: MockProjectsService}
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

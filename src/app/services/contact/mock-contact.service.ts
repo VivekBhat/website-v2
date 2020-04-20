@@ -5,7 +5,7 @@ import {FormspreeResponse} from '../../models/response/formspree.response';
 import {IpInfo} from '../../models/ip-info/ip-info';
 import {map} from 'rxjs/operators';
 import {IpInfoConverter} from '../../responses/ip-info.response';
-import { Injectable } from "@angular/core";
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class MockContactService implements ContactService {
