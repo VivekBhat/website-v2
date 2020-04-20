@@ -6,7 +6,9 @@ import {FormspreeResponse} from '../../models/response/formspree.response';
 import {ContactService} from './contact.service';
 import {IpInfoConverter, IpInfoResponse} from '../../responses/ip-info.response';
 import {IpInfo} from '../../models/ip-info/ip-info';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class BackendContactService implements ContactService {
 
   ServerUrl = 'https://formspree.io/xnqbwlrb';
