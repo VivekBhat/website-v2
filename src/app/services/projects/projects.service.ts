@@ -51,6 +51,14 @@ export class ProjectsService {
           moreData: ' In this project I am using the serverless deployment template to deploy a serverless app. \n' +
             'Once an image is uploaded to the S3 bucket a Thumbnail of the same image will be created and uploaded in ' +
             'the same bucket with a _thumbnail suffix\n'
+        }, {
+          title: 'Serverless REST API Using AWS',
+          imgName: 'serverless-nodejs-dynamodb-rest-api',
+          technology: 'AWS API Gateway, Lambda, DynamoDB, NodeJS',
+          gitHubLink: 'serverless-nodejs-dynamodb-rest-api',
+          moreData: 'This example demonstrates how to setup a RESTful Web Services and perform the ' +
+            'following operations on a dynamoDB database:\n' +
+            'Create, List, Get, Update, Delete'
         }
       ]
     );
