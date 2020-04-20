@@ -49,10 +49,10 @@ jobs:
       - name: Build
         run:  npm run build:prod
 
-      - name: See
-        run:  |
-          cat src/environments/*.ts
-          ls -R
+#      - name: See
+#        run:  |
+#          cat src/environments/*.ts
+#          ls -R
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
