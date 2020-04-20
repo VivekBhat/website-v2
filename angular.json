@@ -105,6 +105,9 @@
             "browserTarget": "personal-portfolio-angular:build"
           },
           "configurations": {
+            "dev": {
+              "browserTarget": "personal-portfolio-angular:build:dev"
+            },
             "production": {
               "browserTarget": "personal-portfolio-angular:build:production"
             }

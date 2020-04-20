@@ -7,8 +7,12 @@ import {map} from 'rxjs/operators';
 import {IpInfoConverter} from '../../responses/ip-info.response';
 
 export class MockContactService implements ContactService {
-  contactForm(contact: Contact): Observable<FormspreeResponse> {
-    return undefined;
+  constructor() {
+    console.log('Mock Contact Services');
+  }
+
+  contactForm(formdata: Contact): Observable<FormspreeResponse> {
+    return of({next: '', ok: true});
   }
 
   getClientInfo(): Observable<IpInfo> {
