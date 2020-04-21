@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   onClick(id: string) {
     if (id === 'resume') {
-      window.open('../../../assets/resume/Resume_Vivek_Bhat.pdf', '_blank');
+      window.open('assets/resume/Resume_Vivek_Bhat.pdf', '_blank');
     } else {
       id = '#' + id;
       const element = document.querySelector(id);

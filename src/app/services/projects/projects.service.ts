@@ -61,5 +61,11 @@ export const otherProjects = [
     technology: 'AWS API Gateway, Lambda, DynamoDB, NodeJS',
     gitHubLink: 'serverless-ec2-start-stop',
     readmeLink: 'https://raw.githubusercontent.com/VivekBhat/serverless-ec2-start-stop/master/Readme.md'
+  }, {
+    title: 'Docker Fun',
+    imgName: 'Docker-Fun',
+    technology: 'Docker, Vagrant, Virtual Machines',
+    gitHubLink: 'Docker-Fun',
+    readmeLink: 'https://raw.githubusercontent.com/VivekBhat/Docker-Fun/master/Readme.md'
   }
 ];
