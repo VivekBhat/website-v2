@@ -56,6 +56,12 @@ export const otherProjects = [
     gitHubLink: 'serverless-nodejs-dynamodb-rest-api',
     readmeLink: 'https://raw.githubusercontent.com/VivekBhat/serverless-nodejs-dynamodb-rest-api/master/Readme.md'
   }, {
+    title: 'Library Room Booking App',
+    imgName: 'LibAppV3',
+    technology: 'Ruby On Rails, GitHub, Heroku, Rspec Testing',
+    gitHubLink: 'LibAppV3',
+    readmeLink: 'https://raw.githubusercontent.com/VivekBhat/LibAppV3/master/README.md'
+  }, {
     title: 'Serverless EC2 Start Stop',
     imgName: 'serverless-ec2-start-stop',
     technology: 'AWS API Gateway, Lambda, DynamoDB, NodeJS',
