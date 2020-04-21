@@ -73,5 +73,11 @@ export const otherProjects = [
     technology: 'Docker, Vagrant, Virtual Machines',
     gitHubLink: 'Docker-Fun',
     readmeLink: 'https://raw.githubusercontent.com/VivekBhat/Docker-Fun/master/Readme.md'
+  }, {
+    title: 'Mock Twitter',
+    imgName: 'MockTwitter',
+    technology: 'Knockout JS, Selenium, Java',
+    gitHubLink: 'MockTwitter',
+    readmeLink: 'https://raw.githubusercontent.com/VivekBhat/MockTwitter/master/Readme.md'
   }
 ];
