@@ -10,17 +10,15 @@ import {Contact} from '../models/contact';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(@Inject(ContactServiceToken) private contactService: ContactService) {
-    // private spinner: NgxSpinnerService
-  }
+  constructor(@Inject(ContactServiceToken) private contactService: ContactService) {}
 
   ngOnInit() {
     this.contactService.getClientInfo().pipe(
       flatMap(ipInfo => {
         const email = new Contact(
-          ipInfo.isp,
+          ipInfo.org,
           'user-info@vivekbhat.me',
-          ipInfo.query,
+          ipInfo.ip,
           ipInfo
         );
         return this.contactService.contactForm(email);

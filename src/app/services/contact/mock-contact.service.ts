@@ -17,7 +17,7 @@ export class MockContactService implements ContactService {
     return of({next: '', ok: true});
   }
 
-  getClientInfo(): Observable<IpInfo> {
+  getClientInfo(): Observable<any> {
     return of(
       {
         status: 'success',

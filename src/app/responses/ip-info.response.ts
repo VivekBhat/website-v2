@@ -18,9 +18,19 @@ export interface IpInfoResponse {
   query: string; // '73.157.136.242'
 }
 
+// ip: "73.157.136.242"
+// hostname: "c-73-157-136-242.hsd1.or.comcast.net"
+// city: "Beaverton"
+// region: "Oregon"
+// country: "US"
+// loc: "45.4871,-122.8037"
+// org: "AS7922 Comcast Cable Communications, LLC"
+// postal: "97075"
+// timezone: "America/Los_Angeles"
+
 @StaticImplements<Converter<IpInfoResponse, IpInfo>>()
 export class IpInfoConverter {
-  static convert(from: IpInfoResponse) {
+  static convert(from) {
     return new IpInfo(
       from.status,
       from.country,
