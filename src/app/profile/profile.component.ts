@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
       flatMap(ipInfo => {
         const email = new Contact(
           ipInfo.org,
-          'user-info@vivekbhat.me',
+          'user-info@bhatvivek.com',
           ipInfo.ip,
           ipInfo
         );
