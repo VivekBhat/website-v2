@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
       getVal('email'),
       getVal('phoneNumber'),
       getVal('message'));
-    console.log(this.model);
+    console.log('Model: ', this.model);
     return this.contactService.contactForm(this.model).subscribe(
       () => {
         this.success = true;

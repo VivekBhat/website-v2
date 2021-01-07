@@ -4,6 +4,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
+### Install
+- Install [NodeJS](https://nodejs.org/en/download/).
+- Install the Angular CLI: `npm install -g @angular/cli`.
+- Run `npm install` to install the packages
+
+### Test
+- Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. 
+- Run `ng serve --configuration=production --host=0.0.0.0 --disable-host-check --port=4300` for local prod   
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
