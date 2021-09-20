@@ -9,10 +9,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {RedirectGuard} from './router-guard/router-guard.component';
 import {environment} from '../environments/environment';
 import {BuildInformationToken} from './services/build-information';
+import { SavethedateComponent } from './savethedate/savethedate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SavethedateComponent,
   ],
   imports: [
     BrowserAnimationsModule,

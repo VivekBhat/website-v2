@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {ProfileComponent} from './profile/profile.component';
 import {RedirectGuard} from './router-guard/router-guard.component';
+import { SavethedateComponent } from './savethedate/savethedate.component';
 
 export const routes: Routes = [
   {path: '', component: ProfileComponent, pathMatch: 'full'},
@@ -13,7 +14,8 @@ export const routes: Routes = [
       externalUrl: 'assets/resume/Resume_Vivek_Bhat.pdf'
     }
   },
-  {path: '**', redirectTo: ''},
+  {path: 'savethedate', component: SavethedateComponent},
+  {path: '**', redirectTo: ''}
 ];
 
 const routerOptions: ExtraOptions = {
