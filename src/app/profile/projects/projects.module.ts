@@ -19,7 +19,7 @@ import {MarkdownModule} from 'ngx-markdown';
   exports: [ProjectsComponent]
 })
 export class ProjectsModule {
-  static forRoot(environment): ModuleWithProviders {
+  static forRoot(environment): ModuleWithProviders<ProjectsModule> {
     return {
       ngModule: ProjectsModule,
       providers: [
