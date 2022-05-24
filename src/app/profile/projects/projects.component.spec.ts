@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {ProjectsComponent} from './projects.component';
 import {OssProjectsComponent} from './oss-projects/oss-projects.component';
@@ -10,7 +10,7 @@ describe('ProjectsComponent', () => {
   let fixture: ComponentFixture<ProjectsComponent>;
 
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ProjectsComponent, OssProjectsComponent],
       providers: [

@@ -19,9 +19,10 @@ export const routes: Routes = [
 ];
 
 const routerOptions: ExtraOptions = {
-  scrollPositionRestoration: 'enabled',
-  anchorScrolling: 'enabled',
-  scrollOffset: [0, 64],
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 64],
+    relativeLinkResolution: 'legacy'
 };
 
 @NgModule({
