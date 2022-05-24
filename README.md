@@ -1,6 +1,6 @@
 ![CI](https://github.com/VivekBhat/p2/workflows/CI/badge.svg)
 
-Link: https://bhatvivek.com/
+Website: https://bhatvivek.com/
 
 # Personal Portfolio 2
 
