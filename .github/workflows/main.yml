@@ -45,9 +45,9 @@ jobs:
 
       - name: checking environment variables
         run: |
-        printenv
-        cat src/environments/*.ts
-        ls -R
+          printenv
+          cat src/environments/*.ts
+          ls -R
 
       # ... Other steps ...
 
