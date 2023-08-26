@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: CI Init
-        run: npm i
+        run: npm cache clean --force && npm i
 
       - name: Cleaning repo
         run: npm run clean
