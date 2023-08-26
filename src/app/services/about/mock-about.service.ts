@@ -7,7 +7,7 @@ export class MockAboutService implements AboutService {
 
   getAbout(): Observable<string[]> {
     const about =
-      'I am a software engineer working for Microsoft and write clean, scalable and tolerant microservice for the Wide Area Networking team of Azure. '+
+      'I am a software engineer working for Amazon and write clean, scalable and tolerant microservice for the Wide Area Networking team of Azure. '+
       'I am also an AWS Certified Developer and Solutions Architect with experience designing, developing and deploying AI and Big Data ' +
       'solutions in a high paced agile environment. I am an avid clean coder who is adept at rapid prototyping for fast turnaround times in POCs.\n' +
       'I have rich experience with all stages of the software development life cycle, ' +
