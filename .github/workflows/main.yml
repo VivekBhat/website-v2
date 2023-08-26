@@ -51,11 +51,33 @@ jobs:
 
       # ... Other steps ...
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     base_href: /
+      #     build_configuration: production
+      #     BRANCH: gh-pages # The branch the action should deploy to.
+      #     FOLDER: dist # The folder the action should deploy.
+
+      - name: Angular Deploy gh-pages Actions
+        # You may pin to the exact commit or the version.
+        # uses: AhsanAyaz/angular-deploy-gh-pages-actions@2272ef32f364bc80d8680ee03d8e58f126156c31
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          base_href: /
-          build_configuration: production
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          # Github access token token used to deploy on gh_pages. You can find it on Github.
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          # The directory of the angular project, in which all the commands will run
+          # angular_project_dir: dist # optional, default is ./
+          # Build configuration for the angular app
+          # build_configuration: production # optional, default is production
+          # base href for the app
+          # base_href: / # optional, default is /
+          # branch on which the angular build will be deployed
+          # deploy_branch: # optional, default is gh-pages
+          # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
+          # angular_dist_build_folder: # optional, default is dist
+          # If the action should run 'ng lint'
+          # run_lint: # optional
+          # Will not fail the step if anything fails
+          # skip_failure: # optional
