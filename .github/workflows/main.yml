@@ -40,10 +40,14 @@ jobs:
           sed -i "s/BUILD_TIME/$BUILD_TIME/" src/environments/*.ts
           sed -i "s/VERSION/$VERSION/" src/environments/*.ts
 
-      # ... Other steps ...
-
       - name: Build
         run:  npm run build:prod
+
+      - name: checking environment variables
+        run: |
+        printenv
+        cat src/environments/*.ts
+        ls -R
 
       # ... Other steps ...
 
