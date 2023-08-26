@@ -1,35 +1,40 @@
 name: Build and Deploy
 on:
   push:
-    branches: ["master"]
-
+    branches: [ master ]
 jobs:
+
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          node-version: 14 # Update to the desired Node.js version
+          node-version: ${{ matrix.node-version }}
 
-      - name: Install Dependencies
-        run: |
-          npm ci
-          npm install -g @angular/cli
+      - name: CI Init
+        run: npm i
 
-      # ... Other steps ...
+      - name: Cleaning repo
+        run: npm run clean
+
+      - name: Run tests
+        run: npm run ci_test
 
       - name: Set environment
         run: |
@@ -40,12 +45,17 @@ jobs:
           sed -i "s/BUILD_TIME/$BUILD_TIME/" src/environments/*.ts
           sed -i "s/VERSION/$VERSION/" src/environments/*.ts
 
-      # ... Other steps ...
+      - name: checking environment variables
+        run: printenv
+
 
       - name: Build
         run:  npm run build:prod
 
-      # ... Other steps ...
+#      - name: See
+#        run:  |
+#          cat src/environments/*.ts
+#          ls -R
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
