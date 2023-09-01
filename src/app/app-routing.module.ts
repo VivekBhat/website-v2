@@ -15,7 +15,7 @@ export const routes: Routes = [
     }
   },
   {path: 'savethedate', component: SavethedateComponent},
-  {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: '/website-v2'}
 ];
 
 const routerOptions: ExtraOptions = {
