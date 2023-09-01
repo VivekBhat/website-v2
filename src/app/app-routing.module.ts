@@ -1,11 +1,11 @@
-import {NgModule} from '@angular/core';
-import {ExtraOptions, RouterModule, Routes} from '@angular/router';
-import {ProfileComponent} from './profile/profile.component';
-import {RedirectGuard} from './router-guard/router-guard.component';
+import { NgModule } from '@angular/core';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { RedirectGuard } from './router-guard/router-guard.component';
 import { SavethedateComponent } from './savethedate/savethedate.component';
 
 export const routes: Routes = [
-  {path: '', component: ProfileComponent, pathMatch: 'full'},
+  { path: '', component: ProfileComponent, pathMatch: 'full' },
   {
     path: 'resume',
     canActivate: [RedirectGuard],
@@ -14,15 +14,15 @@ export const routes: Routes = [
       externalUrl: 'assets/resume/Resume_Vivek_Bhat.pdf'
     }
   },
-  {path: 'savethedate', component: SavethedateComponent},
-  {path: '**', redirectTo: '/website-v2'}
+  { path: 'savethedate', component: SavethedateComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 const routerOptions: ExtraOptions = {
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-    scrollOffset: [0, 64],
-    relativeLinkResolution: 'legacy'
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+  relativeLinkResolution: 'legacy'
 };
 
 @NgModule({
@@ -30,4 +30,4 @@ const routerOptions: ExtraOptions = {
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }
