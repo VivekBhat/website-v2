@@ -2081,7 +2081,7 @@ const environment = {
     production: false,
     ipInfo: _app_services_contact_mock_contact_service__WEBPACK_IMPORTED_MODULE_0__.MockContactService,
     projects: _app_services_projects_mock_projects_service__WEBPACK_IMPORTED_MODULE_1__.MockProjectsService,
-    build: { version: '2.5.1', commit: '1b524b7c', buildTime: 'Thu Sep 28 10:59:35 PDT 2023', buildPipeline: '6342537226' }
+    build: { version: '2.5.1', commit: '67dc1bfb', buildTime: 'Thu Sep 28 14:34:30 PDT 2023', buildPipeline: '6344465477' }
 };
 
 
