@@ -1,4 +1,4 @@
-![CI](https://github.com/VivekBhat/p2/workflows/CI/badge.svg)
+![CI](https://github.com/VivekBhat/website-v2/actions/workflows/main.yml/badge.svg)
 
 Website: https://bhatvivek.com/
 
