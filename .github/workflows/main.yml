@@ -41,7 +41,7 @@ jobs:
           sed -i "s/VERSION/$VERSION/" src/environments/*.ts
 
       - name: Build
-        run:  npm run build
+        run:  npm run build:ci
 
       - name: checking environment variables
         run: |
