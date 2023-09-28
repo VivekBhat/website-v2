@@ -41,7 +41,12 @@ jobs:
           sed -i "s/VERSION/$VERSION/" src/environments/*.ts
 
       - name: Build
-        run:  docker run -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm run build
+        run:  |
+          rm -rf node_modules
+          rm package-lock.json
+          docker run -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm install
+          docker run -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm run build
+
 
       - name: checking environment variables
         run: |
