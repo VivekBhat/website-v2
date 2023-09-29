@@ -11,6 +11,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Install the Angular CLI: `npm install -g @angular/cli`.
 - Run `npm install` to install the packages
 
+## Installation using docker:
+- docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm install
+- docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm run build
+- docker run -it --rm -w /app -v $(pwd):/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
+
 ### Test
 - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 - Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
