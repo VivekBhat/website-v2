@@ -50,14 +50,9 @@ jobs:
           cat src/environments/*.ts
           find . -maxdepth 1 -ls
 
-  deploy:
-    needs: build  # This ensures the deploy job runs after the build job completes successfully
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        BRANCH: gh-pages # (default) The branch the action should deploy to.
-        FOLDER: dist # The folder the action should deploy.
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: gh-pages # (default) The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
 
