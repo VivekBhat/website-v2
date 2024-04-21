@@ -43,8 +43,7 @@ jobs:
         run:  |
           rm -rf node_modules
           rm package-lock.json
-          docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm install
-          docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm run build:prod
+          docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm install && npm run build:prod
 
       - name: checking environment variables
         run: |
@@ -54,11 +53,8 @@ jobs:
       # ... Other steps ...
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          base_href: /website-v2
-          build_configuration: production
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: gh-pages # (default) The branch the action should deploy to.
           FOLDER: dist/website-v2 # The folder the action should deploy.
 
