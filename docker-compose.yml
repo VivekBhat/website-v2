@@ -8,4 +8,5 @@ services:
     ports:
       - "4200:4200"  # Expose port 4200 from the container to the host
     command: 
+      - npm ci
       - ng serve

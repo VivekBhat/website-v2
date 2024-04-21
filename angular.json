@@ -52,7 +52,7 @@
                   "ignore": [
                     "**/*.csv"
                   ],
-                  "output": "/website-v2/assets/"
+                  "output": "/assets/"
                 }
               ],
               "optimization": true,
