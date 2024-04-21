@@ -29,7 +29,6 @@ jobs:
       #     npm ci
       #     npm install -g @angular/cli
 
-      # ... Other steps ...
 
       - name: Set environment
         run: |
@@ -47,12 +46,10 @@ jobs:
           docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm install
           docker run --rm -w /app -v $(pwd):/app alexsuch/angular-cli:10.2.3 npm run build:prod
 
-
       - name: checking environment variables
         run: |
-          printenv
           cat src/environments/*.ts
-          ls -R
+          find . -maxdepth 1 -ls
 
       # ... Other steps ...
 
