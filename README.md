@@ -1,6 +1,7 @@
 ![CI](https://github.com/VivekBhat/website-v2/actions/workflows/main.yml/badge.svg)
 
 Website: https://bhatvivek.com/
+GH Page: https://vivekbhat.github.io/website-v2/ 
 
 # Personal Portfolio 2
 
