@@ -51,6 +51,7 @@ jobs:
           find . -maxdepth 1 -ls
 
   deploy:
+    needs: build  # This ensures the deploy job runs after the build job completes successfully
     runs-on: ubuntu-latest
 
     steps:
