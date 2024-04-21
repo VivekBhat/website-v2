@@ -60,5 +60,5 @@ jobs:
           base_href: /website-v2
           build_configuration: production
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          FOLDER: dist/website-v2 # The folder the action should deploy.
 
