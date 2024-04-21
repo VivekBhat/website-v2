@@ -50,11 +50,13 @@ jobs:
           cat src/environments/*.ts
           find . -maxdepth 1 -ls
 
-      # ... Other steps ...
+  deploy:
+    runs-on: ubuntu-latest
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          BRANCH: gh-pages # (default) The branch the action should deploy to.
-          FOLDER: dist/website-v2 # The folder the action should deploy.
+    steps:
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        BRANCH: gh-pages # (default) The branch the action should deploy to.
+        FOLDER: dist # The folder the action should deploy.
 
