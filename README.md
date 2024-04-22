@@ -19,6 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Windows
 - docker run --rm -w /app -v ${PWD}:/app alexsuch/angular-cli:10.2.3 npm install && npm run build:prod
+- docker run --rm -w /app -v ${PWD}:/app alexsuch/angular-cli:10.2.3 npm run build:prod
 - docker run -it --rm -w /app -v $(PWD):/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
 
 ### Test
