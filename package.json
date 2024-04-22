@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean": "rimraf ./dist",
-    "build:prod": "ng build --configuration=production --base-href=https://vivekbhat.github.io/  --deploy-url=/website-v2/",
+    "build:prod": "ng build --configuration=production --base-href=https://vivekbhat.github.io/website-v2  --deploy-url=/website-v2/",
     "ci_test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "build:ci": "npm run clean && npm run ci_test && npm run build:prod"
   },
