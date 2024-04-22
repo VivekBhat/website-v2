@@ -55,4 +55,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ### NOTES
-`base-href` is needed when I am deploying the site to local github project and website 2 otherwise it is not needed for CNAME website"
+`base-href` is needed when I am deploying the site to local github project and website 2 otherwise it is not needed for CNAME website
