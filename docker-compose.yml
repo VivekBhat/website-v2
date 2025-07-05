@@ -1,12 +1,10 @@
-version: '3'
+version: '3.8'
+
 services:
-  app_installer:
-    image: alexsuch/angular-cli:10.2.3
-    working_dir: /app
+  angular-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - .:/app
-    ports:
-      - "4200:4200"  # Expose port 4200 from the container to the host
-    command: 
-      - npm ci
-      - ng serve
+      - ./dist:/app/dist
+    container_name: angular-gh-build
