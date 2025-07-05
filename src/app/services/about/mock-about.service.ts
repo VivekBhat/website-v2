@@ -8,15 +8,21 @@ export class MockAboutService implements AboutService {
   getAbout(): Observable<string[]> {
 
     const about =
-      'Hi, I\'m Vivek Bhat - a Software Engineer at Amazon, where I design and build clean, scalable, and resilient microservices for the Same Day Delivery team. ' +
-      'I am an AWS Certified Developer and Solutions Architect with hands-on experience in designing, developing, and deploying AI and Big Data solutions in fast-paced Agile environments. ' +
-      'I take pride in writing clean code and am passionate about rapid prototyping to deliver quick and effective proof-of-concepts.\n' +
-      'With over 6 years of progressive experience, I have worked across the full software development lifecycle using technologies such as Java, AWS, Apache Hadoop, HDFS, HBase, NiFi, Angular, HTML, CSS, and TypeScript. \n' +
-      'I thrive in Agile teams, bringing creative design thinking and a strong commitment to delivering high-quality solutions in dynamic settings.\n' +
-      'Outside of work, I enjoy listening to music, playing soccer and cricket, swimming, and hiking. I\'m always eager to explore innovations that expand my skill set and knowledge base.\n' +
-      'I approach challenges with a positive mindset and solve problems efficiently. I value time and strive to make every moment count in the work I do.\n';
-    const arr: string[] = about.split('\n');
-    return of(arr);
+      "Hi, I'm Vivek Bhat — a Senior Software Engineer at Hughes, where I lead AI/ML and data science efforts for " +
+      "customers in the satellite internet domain. I devised software development strategies, defined engineering " +
+      "processes, and delivered scalable, production-grade solutions from the ground up.\n" +
+      "My work includes collaborating with stakeholders to gather requirements, building real-time Flink applications " +
+      "for streaming analytics, and implementing CI/CD pipelines to streamline development. I also optimized AWS " +
+      "infrastructure monitoring, reducing costs by 65% and saving over $4K per month.\n" +
+      "With around 8 years of professional experience, I’ve previously worked with Amazon, Microsoft, and Intel, " +
+      "gaining deep expertise across the full software development lifecycle. My tech stack includes Java, AWS, Apache " +
+      "Hadoop, HDFS, HBase, NiFi, Angular, HTML, CSS, and TypeScript. I thrive in Agile environments, value clean code, " +
+      "and enjoy rapid prototyping to bring ideas to life quickly.\n" +
+      "Outside of work, I enjoy music, soccer, cricket, swimming, and hiking. I’m passionate about innovation and " +
+      "always eager to expand my skills and knowledge.\n";
+
+
+    return of(about.split('\n'));
   }
 
 }
