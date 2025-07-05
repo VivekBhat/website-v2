@@ -3,12 +3,21 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy source code
 COPY . .
 
-# Build the Angular app for production
-RUN npx ng build --configuration production --base-href /website-v2/
+# Use npx to run Angular CLI without installing it globally
+RUN npx ng build --configuration production
+
+# Stage 2: Serve the app with Nginx
+FROM nginx:alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=builder /app/dist/website-v2 /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
